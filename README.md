@@ -72,6 +72,26 @@ In reinforcement learning, the **Cliff Walking** task (Sutton & Barto, *Reinforc
 
 ---
 
+## 📈 Visualizations & Empirical Results
+
+### 1. Optimal vs. Safe Path Comparison
+Q-Learning takes the razor-thin, minimum-step route along row 2 directly adjacent to the cliff (-13 reward). In contrast, SARSA selects the conservative loop through row 0 (-17 reward) to avoid catastrophic drops triggered by $\epsilon$-exploration.
+
+![Path Comparison](assets/path_comparison.png)
+
+### 2. Learning Curves & Cliff Falls
+Comparison of mean episodic rewards and cliff falls across 5 independent seeds (with moving average smoothing and standard error bands):
+
+![Learning Curves](assets/learning_curves.png)
+
+### 3. Policy Vector Fields & Evaluation Trajectories
+
+| Q-Learning (Risky Edge Trajectory) | SARSA (Upper Detour Trajectory) |
+| :---: | :---: |
+| ![Q-Learning Policy](assets/q-learning_policy.png) | ![SARSA Policy](assets/sarsa_policy.png) |
+
+---
+
 ## 📂 Repository Structure
 
 ```text
